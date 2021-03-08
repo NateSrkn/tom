@@ -1,15 +1,16 @@
 @import url("https://use.typekit.net/rpw5lfi.css");
-
+@import "./variables";
 body {
-  background: rgb(43, 38, 39);
-  color: rgb(244, 242, 225);
+  background: $black;
+  color: $white;
   font-family: "degular", sans-serif;
 }
 
 main {
   min-height: 100vh;
+  max-width: 120rem;
+  margin: 0 auto;
   display: flex;
-  align-content: center;
   justify-content: center;
 
   h2 {

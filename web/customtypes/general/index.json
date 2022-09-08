@@ -1,0 +1,37 @@
+{
+  "id": "general",
+  "label": "General",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "desktop_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Desktop Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "mobile_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Mobile Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "socials": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

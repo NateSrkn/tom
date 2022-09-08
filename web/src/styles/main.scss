@@ -1,22 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://use.typekit.net/rpw5lfi.css");
 @import "./variables";
 body {
-  background: $black;
-  color: $white;
+  background: rgb(224, 224, 219);
+  color: $black;
   font-family: "degular", sans-serif;
 }
 
 main {
-  min-height: 100vh;
-  max-width: 120rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-
-  h2 {
-    font-family: "fakir-new";
-    font-weight: 400;
-  }
   a {
     color: inherit;
     text-decoration: none;

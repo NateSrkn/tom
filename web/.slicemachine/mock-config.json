@@ -1,0 +1,39 @@
+{
+  "_cts": {
+    "about": {
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "general": {},
+    "project": {},
+    "projects_page": {}
+  },
+  "slices": {
+    "Socials": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Project": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "ImageSlice": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "GalleryGrid": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}

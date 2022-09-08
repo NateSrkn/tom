@@ -1,32 +1,28 @@
 import React from "react";
-import Head from "next/head";
-
-export default function Home() {
+import { createClient } from "../prismic";
+import { PrismicRichText } from "@prismicio/react";
+import Socials from "../components/Socials";
+import { Layout } from "../components/Layout";
+export default function Home({ page }) {
   return (
-    <React.Fragment>
-      <Head>
-        <title>Home | Tom Blankenship</title>
-      </Head>
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ width: 250 }}>
-          <img src={"/logo.svg"} />
-        </div>
-        <div style={{ margin: "2rem" }}>
-          <h2>Coming Soon</h2>
-          <p>Workin' hard or hardly working?</p>
-          <p>Full site coming early 2021</p>
-          <a href={"https://www.instagram.com/tomb.design/"}>
-            Instagram - @tomb.design
-          </a>
+    <Layout meta={{ title: "Home" }}>
+      <div className="flex flex-col justify-center relative">
+        <h3 className="text-2xl md:text-[3vw] mb-8 md:mb-12">
+          {page.data.headline}
+        </h3>
+        <div className="text-lg md:text-[2.25vw] leading-tight space-y-8">
+          <PrismicRichText field={page.data.description} />
+          <Socials />
         </div>
       </div>
-    </React.Fragment>
+    </Layout>
   );
+}
+
+export async function getStaticProps({ previewData }) {
+  const client = createClient({ previewData });
+  const page = await client.getByType("about");
+  return {
+    props: { page: page.results[0] },
+  };
 }

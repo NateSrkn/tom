@@ -10,8 +10,10 @@ const ProjectPage = ({ project, nextProject, previousProject }) => {
     <Layout meta={{ title: project.data.title }}>
       <div className="w-full space-y-12">
         <div className="w-full flex flex-col space-y-4 md:space-y-12">
-          <h1 className="text-2xl md:text-[3vw]">{project.data.title}</h1>
-          <div className="text-lg md:text-[2.25vw] leading-tight">
+          <h1 className="text-2xl md:text-[clamp(16px,3vw,52px)]">
+            {project.data.title}
+          </h1>
+          <div className="text-lg md:text-[clamp(14px,2.25vw,43px)] leading-tight">
             <PrismicRichText field={project.data.description} />
           </div>
         </div>

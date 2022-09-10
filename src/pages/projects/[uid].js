@@ -8,13 +8,11 @@ import { BsChevronCompactRight, BsChevronCompactLeft } from "react-icons/bs";
 const ProjectPage = ({ project, nextProject, previousProject }) => {
   return (
     <Layout meta={{ title: project.data.title }}>
-      <div className="w-full my-8">
-        <div className="w-full flex flex-col items-center">
-          <div>
-            <h1 className="text-4xl font-semibold">{project.data.title}</h1>
-            <div className="prose-lg md:prose-2xl max-w-xl">
-              <PrismicRichText field={project.data.description} />
-            </div>
+      <div className="w-full space-y-12">
+        <div className="w-full flex flex-col space-y-4 md:space-y-12">
+          <h1 className="text-2xl md:text-[3vw]">{project.data.title}</h1>
+          <div className="text-lg md:text-[2.25vw] leading-tight">
+            <PrismicRichText field={project.data.description} />
           </div>
         </div>
         <div>
@@ -31,7 +29,7 @@ const ProjectPage = ({ project, nextProject, previousProject }) => {
                           width={i.image.dimensions.width}
                           height={i.image.dimensions.height}
                           layout="responsive"
-                          className="shadow-lg w-full"
+                          className="w-full"
                         />
                         <div className="text-lg my-2">
                           <PrismicRichText field={i.description} />
@@ -46,7 +44,7 @@ const ProjectPage = ({ project, nextProject, previousProject }) => {
             }
           })}
         </div>
-        <footer className="flex justify-between my-24 text-lg md:text-2xl">
+        <footer className="flex justify-between text-lg md:text-2xl py-12 md:py-24">
           <div>
             {previousProject && (
               <Link href={`/projects/${previousProject.uid}`}>

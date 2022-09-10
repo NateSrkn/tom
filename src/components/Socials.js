@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "./Link";
-import { SiInstagram, SiTwitter, SiBehance } from "react-icons/si";
+import { SiInstagram, SiBehance, SiLinkedin } from "react-icons/si";
+import { BsFillEnvelopeFill } from "react-icons/bs";
 const Socials = () => {
   return (
-    <ul className="flex gap-6">
+    <ul className="flex gap-6 items-center">
       <li>
         <Link href="http://instagram.com/tomb.design">
           <SiInstagram />
@@ -15,8 +16,13 @@ const Socials = () => {
         </Link>
       </li>
       <li>
-        <Link href="https://twitter.com/TmBlnknshp">
-          <SiTwitter />
+        <Link href="https://www.linkedin.com/in/thomas-blankenship-a54916190/">
+          <SiLinkedin />
+        </Link>
+      </li>
+      <li>
+        <Link href="mailto:hi@tombdesign.com">
+          <BsFillEnvelopeFill />
         </Link>
       </li>
     </ul>

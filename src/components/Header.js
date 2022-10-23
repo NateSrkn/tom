@@ -26,6 +26,11 @@ const Header = () => {
         <li>
           <ActiveLink href="/projects">Projects</ActiveLink>
         </li>
+        <li>
+          <Link href="/Portfolio_10_22.pdf" forceNewTab>
+            Portfolio
+          </Link>
+        </li>
       </ul>
     </header>
   );

@@ -30,7 +30,6 @@ const ProjectPage = ({ project, nextProject, previousProject }) => {
                           key={i.image.url}
                           width={i.image.dimensions.width}
                           height={i.image.dimensions.height}
-                          layout="responsive"
                           className="w-full"
                         />
                         <div className="text-lg my-2">

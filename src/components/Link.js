@@ -6,10 +6,8 @@ const Link = ({ href, children, forceNewTab = false, ...props }) => {
   const rel = isNewTab ? "noopener noreferrer" : undefined;
   const target = isNewTab ? "_blank" : "_self";
   return (
-    <NextLink href={href} passHref>
-      <a {...props} rel={rel} target={target}>
-        {children}
-      </a>
+    <NextLink href={href} passHref {...props} rel={rel} target={target}>
+      {children}
     </NextLink>
   );
 };
